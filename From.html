@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form Page</title>
+	</head>
+	<body>
+		<form method="post" action="#" target="_blanck" novalidate >
+		<fieldset>
+		<legend> Primary Information:</legend>
+			<label for="fullname">Full Name:</label>
+			<input type="text" name="fullname" id="fullname" readonly value=absc>
+
+			<br><br>
+
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" placeholder ="Write your password." required>
+		
+			<br><br>
+
+			<label for="gender">Gender:</label>
+			<input type="radio" name="gender" id="male" value="male">
+			<label for="male">Male</label>
+			<input type="radio" name="gender" id="female" value="female">
+			<label for="female">Female</label>
+
+			<br><br>	
+			</fieldset>
+			
+			<fieldset>
+			<legend> Secondary Information:</legend>
+			<label for="fav_lang">Favorite Language:</label>
+			<input type="checkbox" name="cpp" id="cpp" value="cpp">
+			<label for="cpp">C++</label>
+			<input type="checkbox" name="java" id="java" value="java">
+			<label for="java">Java</label>
+			<input type="checkbox" name="python" id="python" value="python">
+			<label for="python">Python</label>
+
+			<br><br>	
+
+			<label for="dob">Date of Birth:</label>
+			<input type="date" name="date_of_birth" id="dob">
+
+			<br><br>	
+
+			<label for="color">Favorite Color:</label>
+			<input type="color" name="color" id="color">
+
+			<br><br>	
+
+			<label for="file">Upload a file:</label>
+			<input type="file" name="file" id="file">
+
+			<br><br>	
+
+			<label for="country">Country</label>
+			<select name="country">
+				<optgroup label="Asia">
+					<option value="bd">Bangladesh</option>
+					<option value="vietnam">Vietnam</option>
+				</optgroup>
+				<optgroup label="North America">
+					<option value="usa">United States of America</option>
+				</optgroup>
+			</select>
+
+			<br><br>	
+			
+
+			<input type="submit">
+			</fieldset>
+		</form>
+	</body>
+</html>
