@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Information</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin: 40px;
+}
+
+table{
+    border-collapse: collapse;
+    margin-top:20px;
+}
+
+table, th, td{
+    border:1px solid black;
+    padding:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>User Information Form</h2>
+
+<label>Enter Name:</label>
+<input type="text" id="name">
+
+<br><br>
+
+<label>Select Gender:</label>
+
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+
+<br><br>
+
+<button onclick="addData()">Submit</button>
+
+<div id="tableArea"></div>
+
+<script>
+
+const tableArea = document.getElementById("tableArea");
+
+const table = document.createElement("table");
+
+const headerRow = document.createElement("tr");
+
+const th1 = document.createElement("th");
+th1.innerText = "Name";
+
+const th2 = document.createElement("th");
+th2.innerText = "Gender";
+
+headerRow.appendChild(th1);
+headerRow.appendChild(th2);
+
+table.appendChild(headerRow);
+
+tableArea.appendChild(table);
+
+function addData(){
+
+    const name = document.getElementById("name").value;
+
+    const gender = document.querySelector('input[name="gender"]:checked');
+
+    if(name === "" || !gender){
+        alert("Please enter name and select gender");
+        return;
+    }
+
+    const row = document.createElement("tr");
+
+    const td1 = document.createElement("td");
+    td1.innerText = name;
+
+    const td2 = document.createElement("td");
+    td2.innerText = gender.value;
+
+    row.appendChild(td1);
+    row.appendChild(td2);
+
+    table.appendChild(row);
+
+}
+
+</script>
+
+</body>
+</html>
